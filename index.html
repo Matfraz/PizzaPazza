@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA pazza</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">PIZZA pazza</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">Chi Siamo</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Benvenuti da PIZZA pazza</h1>
+        <p>La migliore pizza napoletana, kebab e calzoni. Scopri i nostri 85 tipi diversi di pizza!</p>
+    </section>
+
+    <div class="pre__menu">
+        <h2>La nostra filosofia</h2>
+    </div>
+    <section id="menu" class="menu-section">
+        <div class="menu-slide slide-1">
+            <img src="3.jpg" alt="Menu 1"> <!-- Sostituisci con un'immagine reale -->
+            <div>
+                <h2>Tanta varietà</h2>
+                <p>Esplora la nostra vasta selezione di pizze, kebab e calzoni. Qualità e gusto assicurati!</p>
+            </div>
+        </div>
+        <div class="menu-slide slide-2">
+            <img src="5.jpg" alt="Ingredienti di qualità"> <!-- Sostituisci con un'immagine reale -->
+            <div>
+                <h2>Ingredienti di Qualità</h2>
+                <p>Utilizziamo solo ingredienti freschi e di alta qualità per garantire il miglior sapore.</p>
+            </div>
+        </div>
+        <div class="menu-slide slide-3">
+            <img src="4.jpg" alt="Lunga lievitazione"> <!-- Sostituisci con un'immagine reale -->
+            <div>
+                <h2>Lunga Lievitazione</h2>
+                <p>La nostra pizza e le piadine kebab sono fatte con un impasto a lunga lievitazione per una leggerezza unica.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <h2>I Nostri Prodotti</h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="7.png" alt="Pizza" class="product-image">
+                <h3>Pizza</h3>
+                <p>La nostra pizza è preparata con ingredienti freschi e genuini, seguendo le tradizioni della vera pizza italiana. Ogni morso è un'esplosione di sapore e qualità.</p>
+            </div>
+            <div class="product">
+                <img src="8.png" alt="Kebab" class="product-image">
+                <h3>Kebab</h3>
+                <p>Il nostro kebab è fatto con carne di prima scelta, aromatizzata con spezie autentiche e servita con verdure fresche e pane fatto in casa. Un'esperienza di gusto unica.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="about" class="about-section">
+        <h2>Chi Siamo</h2>
+        <div class="about__container">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="6.jpg" alt="Foto 1">
+                <img src="2.jpg" alt="Foto 2">
+                <img src="3.jpg" alt="Foto 3">
+                <!-- Aggiungi altre immagini se necessario -->
+            </div>
+            <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+            <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="about-text">
+            <p>Benvenuti a PIZZA Pazza, dove la passione per la pizza e l'amore per la tradizione si incontrano per offrirvi un'esperienza culinaria indimenticabile. La nostra pizzeria è nata dal sogno di Antonio, un maestro pizzaiolo con profonde radici nelle antiche tradizioni napoletane, che ha dedicato la sua vita a perfezionare l'arte della pizza.
+
+                Da PIZZA Pazza, crediamo che la qualità inizi dagli ingredienti. Utilizziamo solo pomodori italiani maturati al sole, mozzarella di bufala DOP e olio extra vergine di oliva della migliore qualità. Ogni impasto è preparato con una lunga lievitazione, garantendo una base leggera, croccante e altamente digeribile.
+                
+                La nostra cucina è un laboratorio di sapori dove tradizione e innovazione si fondono. Le nostre pizze, kebab e calzoni sono frutto di anni di ricerca e sperimentazione, create con amore e cura per deliziare anche i palati più esigenti. Ogni piatto che esce dal nostro forno è un omaggio alla cultura culinaria italiana e un invito a condividere momenti di gioia e convivialità.
+                </p>
+        </div>
+    </div>
+    </section>
+    
+
+    <section id="contact" class="contact-section">
+        <h2>Vienici a Trovare</h2>
+        <div class="contact-container">
+            <iframe class="mappa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5636.205157124161!2d7.584560175380714!3d45.06343017107022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886b40f06714bd%3A0xc91da49ba62c7658!2sPizza%20pazza!5e0!3m2!1sit!2sit!4v1715944851347!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-info">
+                <h3>Contattaci</h3>
+                <p><strong>Indirizzo:</strong> Via Roma, 123, 10100 Torino, Italia</p>
+                <p><strong>Telefono:</strong> <a href="tel:+391234567890">+39 123 456 7890</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@pizzapazza.it">info@pizzapazza.it</a></p>
+                <p><strong>Orari di Apertura:</strong></p>
+                <p>Lunedì - Venerdì: 12:00 - 22:00<br>Sabato - Domenica: 12:00 - 23:00</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Azienda</h4>
+                <ul>
+                    <li><a href="#">Chi siamo</a></li>
+                    <li><a href="#">Lavora con noi</a></li>
+                    <li><a href="#">Innovazione</a></li>
+                    <li><a href="#">Notizie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Supporto</h4>
+                <ul>
+                    <li><a href="#">Centro assistenza</a></li>
+                    <li><a href="#">Contatti</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Termini di servizio</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Iscriviti alla nostra Newsletter</h4>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Inserisci il tuo email" required>
+                    <button type="submit">Iscriviti</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>© 2024 Pizza Pazza. Tutti i diritti riservati.</p>
+        <a href="https://smc-dynamics.web.app" class="p__footer">SMC Dynamics</a>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
