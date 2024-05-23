@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     color: #fff;
     background-color: #000;
+    font-family: 'Playfair Display', serif;
 }
 
 header {
@@ -191,7 +191,7 @@ header.scrolled{
 }
 
 .product {
-    background-color: #222;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -204,6 +204,7 @@ header.scrolled{
 .product-image {
     max-width: 100%;
     border-radius: 10px;
+    background: #000;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 15px;
 }
@@ -211,13 +212,13 @@ header.scrolled{
 .product h3 {
     font-size: 1.8em;
     margin: 15px 0;
-    color: #8D0000;
+    color: #000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .product p {
     font-size: 1.2em;
-    color: #fff;
+    color: #222;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
