@@ -160,6 +160,9 @@ header.scrolled{
     .hamburger.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px); /* Rotazione e traslazione per formare la X */
     }
+    .hero h2{
+        font-size: 3rem;
+    }
 }
 
 
@@ -177,7 +180,7 @@ header.scrolled{
     background-position: center;
 }
 
-.hero h1 {
+.hero h2 {
     font-size: 5em;
     margin: 0;
 }
