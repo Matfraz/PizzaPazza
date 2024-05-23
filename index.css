@@ -161,7 +161,7 @@ header.scrolled{
         transform: rotate(-45deg) translate(5px, -5px); /* Rotazione e traslazione per formare la X */
     }
     .hero h2{
-        font-size: 3rem;
+        font-size: 8rem;
     }
 }
 
