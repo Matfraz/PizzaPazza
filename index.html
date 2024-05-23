@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIZZA pazza</title>
+    <title>PIZZA PAZZA</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <div id="loading-screen">PIZZAPAZZA</div>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">PIZZA pazza</div>
+            <div class="logo">PIZZA PAZZA</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
@@ -18,10 +19,14 @@
                 <li><a href="#contact">Contatti</a></li>
             </ul>
         </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <section id="home" class="hero">
-        <h1>Benvenuti da PIZZA pazza</h1>
+        <h1>Benvenuti da PIZZA PAZZA</h1>
         <p>La migliore pizza napoletana, kebab e calzoni. Scopri i nostri 85 tipi diversi di pizza!</p>
     </section>
 
@@ -51,6 +56,23 @@
             </div>
         </div>
     </section>
+    <section id="menu-mobile" class="menu-section-mobile">
+        <div class="menu-slide-mobile slide-1">
+            <h2>Tanta varietà</h2>
+            <p>Esplora la nostra vasta selezione di pizze, kebab e calzoni. Qualità e gusto assicurati!</p>
+            <img src="3.jpg" alt="Menu 1">
+        </div>
+        <div class="menu-slide-mobile slide-2">
+            <h2>Ingredienti di Qualità</h2>
+            <p>Utilizziamo solo ingredienti freschi e di alta qualità per garantire il miglior sapore.</p>
+            <img src="5.jpg" alt="Ingredienti di qualità">
+        </div>
+        <div class="menu-slide-mobile slide-3">
+            <h2>Lunga Lievitazione</h2>
+            <p>La nostra pizza e le piadine kebab sono fatte con un impasto a lunga lievitazione per una leggerezza unica.</p>
+            <img src="4.jpg" alt="Lunga lievitazione">
+        </div>
+    </section>
 
     <section id="products" class="products-section">
         <h2>I Nostri Prodotti</h2>
@@ -73,26 +95,40 @@
     <section id="about" class="about-section">
         <h2>Chi Siamo</h2>
         <div class="about__container">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="6.jpg" alt="Foto 1">
-                <img src="2.jpg" alt="Foto 2">
-                <img src="3.jpg" alt="Foto 3">
-                <!-- Aggiungi altre immagini se necessario -->
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="6.jpg" alt="Foto 1">
+                    <img src="2.jpg" alt="Foto 2">
+                    <img src="3.jpg" alt="Foto 3">
+                    <!-- Aggiungi altre immagini se necessario -->
+                </div>
+                <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+                <button class="next-btn" onclick="nextSlide()">&#10095;</button>
             </div>
-            <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
-            <button class="next-btn" onclick="nextSlide()">&#10095;</button>
-        </div>
-        <div class="about-text">
-            <p>Benvenuti a PIZZA Pazza, dove la passione per la pizza e l'amore per la tradizione si incontrano per offrirvi un'esperienza culinaria indimenticabile. La nostra pizzeria è nata dal sogno di Antonio, un maestro pizzaiolo con profonde radici nelle antiche tradizioni napoletane, che ha dedicato la sua vita a perfezionare l'arte della pizza.
-
+            <div class="about-text">
+                <p>Benvenuti a PIZZA Pazza, dove la passione per la pizza e l'amore per la tradizione si incontrano per offrirvi un'esperienza culinaria indimenticabile. La nostra pizzeria è nata dal sogno di Antonio, un maestro pizzaiolo con profonde radici nelle antiche tradizioni napoletane, che ha dedicato la sua vita a perfezionare l'arte della pizza.
+    
                 Da PIZZA Pazza, crediamo che la qualità inizi dagli ingredienti. Utilizziamo solo pomodori italiani maturati al sole, mozzarella di bufala DOP e olio extra vergine di oliva della migliore qualità. Ogni impasto è preparato con una lunga lievitazione, garantendo una base leggera, croccante e altamente digeribile.
                 
                 La nostra cucina è un laboratorio di sapori dove tradizione e innovazione si fondono. Le nostre pizze, kebab e calzoni sono frutto di anni di ricerca e sperimentazione, create con amore e cura per deliziare anche i palati più esigenti. Ogni piatto che esce dal nostro forno è un omaggio alla cultura culinaria italiana e un invito a condividere momenti di gioia e convivialità.
                 </p>
+            </div>
         </div>
-    </div>
+        <button class="mobile-history-button" onclick="openPopup()">Scopri la nostra storia</button>
+        <div id="history-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p>Benvenuti a PIZZA Pazza, dove la passione per la pizza e l'amore per la tradizione si incontrano per offrirvi un'esperienza culinaria indimenticabile. La nostra pizzeria è nata dal sogno di Antonio, un maestro pizzaiolo con profonde radici nelle antiche tradizioni napoletane, che ha dedicato la sua vita a perfezionare l'arte della pizza.
+    
+                Da PIZZA Pazza, crediamo che la qualità inizi dagli ingredienti. Utilizziamo solo pomodori italiani maturati al sole, mozzarella di bufala DOP e olio extra vergine di oliva della migliore qualità. Ogni impasto è preparato con una lunga lievitazione, garantendo una base leggera, croccante e altamente digeribile.
+                
+                La nostra cucina è un laboratorio di sapori dove tradizione e innovazione si fondono. Le nostre pizze, kebab e calzoni sono frutto di anni di ricerca e sperimentazione, create con amore e cura per deliziare anche i palati più esigenti. Ogni piatto che esce dal nostro forno è un omaggio alla cultura culinaria italiana e un invito a condividere momenti di gioia e convivialità.
+                </p>
+            </div>
+        </div>
     </section>
+    <div class="divider"></div>
+    
     
 
     <section id="contact" class="contact-section">
