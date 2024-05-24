@@ -91,7 +91,7 @@ header.scrolled{
         background: #000;
         position: fixed; /* Cambiato da absolute a fixed */
         top: 0;
-        right: -120%;
+        right: -160%;
         padding-right: 80px;
         width: 100%;
         height: 300vh;
@@ -120,7 +120,7 @@ header.scrolled{
     }
     
     .nav-links.open {
-        right: -20%;
+        right: -50%;
     }
     .hamburger {
         cursor: pointer;
