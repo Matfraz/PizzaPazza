@@ -4,154 +4,115 @@
     left: 0;
     width: 100%;
     height: 100%;
-    color: #fff;
-    background-color: #000;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999; 
     visibility: visible;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: bold;
 }
 
-
-header {
+.header {
+    font-family: 'Fredoka One', sans-serif;
     position: fixed;
-    width: 100%;
-    top: 0;
     left: 0;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    margin: 0 auto;
+    z-index: 999; 
     background: transparent;
-    z-index: 1000;
-}
-
-header.scrolled{
-    background-color: #000;
-}
-.navbar {
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    justify-content: space-between; /* Cambiato a space-between per allineare meglio gli elementi */
+    padding: 0 20px; /* Aggiunto padding per migliorare la spaziatura */
 }
 
-.logo {
-    font-size: 1.5em;
-    color: #fff;
+.header.scrolled {
+    background: black; 
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+.navbar__logo{
+    background:transparent;
+    font-family:'Fredoka One', sans-serif;
+    font-weight: bold;
+    padding: 1%;
+    font-size: 40px;
+    margin-right: 5%;
 }
-.nav-links ul {
+
+.navbar__logo.scrolled {
+    background: black;
+}
+
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-.nav-links a {
+.menu__a {
     text-decoration: none;
-    color: #FFC107;
-    margin-right: 20px;
-    display: block;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
     color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    margin-right: 20px;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
+.menu__a.scrolled {
+    color: #fff;
 }
 
 .hamburger {
     display: none; /* Nascondi hamburger su desktop */
 }
 
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: yellow;
+    margin: 5px;
+}
 
-@media only screen and (max-width: 960px) {
-    html{
-        overflow-x: hidden;
-    }
-    .nav-links li{width: 100%;} /*per fargli occupare lo spz bene*/
-    
-    .nav-links {
-        background: #000;
-        position: fixed; /* Cambiato da absolute a fixed */
-        top: 0;
-        right: -120%;
-        width: 100%;
-        height: 300vh;
-        display: block;
-        margin: 0;
-        transition: all 1s cubic-bezier(.215, .61, .355, 1);
-    }
-    .nav-links ul {
-        margin-top: 10%;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    .nav-links a{
-        font-size: 20px;
+/* Media query per ottimizzazione mobile */
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Nascondi il menu su mobile */
     }
 
-    
-    .nav-links a.scrolled{
-        color: #000;
-    }
-    
-    .nav-links.open {
-        right: -20%;
-    }
     .hamburger {
+        display: block; /* Mostra l'hamburger su mobile */
         cursor: pointer;
-        display: block;
-        height: 25px;
-        width: 30px;
-        position: absolute; 
-        top: 25px; /* Modificato per allinearlo correttamente */
-        right: 20px; /* Modificato per allinearlo correttamente */
     }
-    .hamburger span {
-        display: block;
-        position: absolute;
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        transition: transform 0.3s ease; /* Aggiunto effetto transizione */
+
+    .header {
+        justify-content: space-between; /* Cambiato a space-between per allineare meglio gli elementi */
+        padding: 0 10px; /* Ridotto padding per migliorare la spaziatura su mobile */
     }
-    .hamburger span:nth-child(1) {
-        top: 0;
+
+    .navbar__logo {
+        font-size: 40px; /* Ridotto il font-size per mobile */
     }
-    .hamburger span:nth-child(2) {
-        top: 10px; /* Modificato per centrare verticalmente */
+
+    .menu-container {
+        flex-direction: column; /* Dispone i box del menu in colonna su dispositivi mobili */
+        align-items: center; /* Centra i box orizzontalmente */
     }
-    .hamburger span:nth-child(3) {
-        top: 20px; /* Aggiunto per la terza barra */
-    }
-    .hamburger.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px); /* Rotazione e traslazione per formare la X */
-    }
-    .hamburger.open span:nth-child(2) {
-        opacity: 0; /* Nasconde la seconda barra quando il menu è aperto */
-    }
-    .hamburger.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px); /* Rotazione e traslazione per formare la X */
+
+    .menu-box {
+        width: 90%; /* Ridotto il width per adattarsi meglio ai dispositivi mobili */
+        margin: 10px 0; /* Ridotto il margin */
     }
 }
 
-
-body{background-color: black; margin: 0; font-family: 'Playfair Display', serif;}
-
-
+body {
+    background-color: black;
+    margin: 0;
+    font-family: 'Fredoka One', sans-serif;
+}
 
 /* Contenitore principale per i box del menù */
 .menu-container {
@@ -161,11 +122,11 @@ body{background-color: black; margin: 0; font-family: 'Playfair Display', serif;
     justify-content: space-around;
     padding: 20px;
 }
-/* Stile per ogni box del menù */
 
+/* Stile per ogni box del menù */
 /* Aggiunta delle transizioni alle dimensioni dei box */
 .menu-box {
-    background-color: white;
+    background-color: #444;
     width: 300px;
     margin: 20px;
     border-radius: 10px;
@@ -180,83 +141,74 @@ body{background-color: black; margin: 0; font-family: 'Playfair Display', serif;
     transform: scale(1.05); /* Ingrandisce il box del 5% */
 }
 
-
-
 /* Stile per le immagini all'interno dei box */
 .menu-box img {
     width: 100%;
     height: auto;
     border-bottom: 5px solid;
 }
+
 /* Stile per i titoli all'interno dei box */
 .menu-box h2 {
     margin: 0;
     padding: 15px;
     font-size: 24px;
-    color: #000;
+    color: #fff;
 }
+
 /* Stile per i paragrafi all'interno dei box */
 .menu-box p {
     padding: 0 15px 15px;
     font-size: 16px;
-    color: #111; 
+    color: #fff; 
 }
+
 /* Stile specifico per il box della pizza */
 .pizza-box {
     border-color: #fff; 
 }
+
 /* Stile specifico per il box del kebab */
 .kebab-box {
     border-color: #fff; 
 }
+
 /* Stile specifico per il box del calzone */
 .calzone-box {
     border-color: #fff; 
 }
+
 /* Stile specifico per il box della Coca Cola */
 .cocacola-box {
     border-color: #fff;
 }
+
 /* Stile specifico per il box della farinata */
 .farinata-box {
     border-color: #fff; 
 }
 
-
-
-
-
-
-.pizze-link {
+.pizze-link, .kebab-link {
     text-decoration: none; /* Rimuove la sottolineatura */
     color: inherit; /* Eredita il colore dall'elemento padre */
     outline: none; /* Rimuove il bordo evidenziato */
 }
 
-.menu-link:focus, .menu-link:active {
+.pizze-link:focus, .kebab-link:focus,
+.pizze-link:active, .kebab-link:active {
     outline: none; /* Rimuove il bordo evidenziato anche quando il link è in focus o attivo */
 }
 
+.color1 { color: #fff; }
+.color2 { color: #fff; }
+.color3 { color: #fff; }
+.color4 { color: #fff; }
+.color5 { color: #fff; }
 
-.color1{color: #fff;}
-.color2{color: #fff;}
-.color3{color: #fff;}
-.color4{color: #fff;}
-.color5{color: #fff;}
+.color5.scrolled { color: #fff; }
+.color2.scrolled { color: #fff; }
 
-.color5.scrolled{color: #fff;}
-.color2.scrolled{color:  #fff}
-
-
-
-
-
-
-
-/*Footer*/
-
-
-
+/* Footer */
 .site-footer {
     background-color: black;
     color: #fff;
@@ -292,11 +244,10 @@ body{background-color: black; margin: 0; font-family: 'Playfair Display', serif;
 
 .footer-bottom {
     text-align: center;
-    background-color: #111;
+    background-color: #444;
     margin-top: 0px;
     border-top: 1px solid #444;
     padding-top: 10px;
-    padding-bottom: 10px;
     color: white;
 }
 
@@ -322,15 +273,6 @@ body{background-color: black; margin: 0; font-family: 'Playfair Display', serif;
 
 .footer-section button:hover {
     background-color: #555;
-}
-.p__footer{
-    text-decoration: none;
-    color: white;
-}
-
-.p__footer:hover{
-    transform: scale(2.15);
-    color: purple;
 }
 
 /* CSS per il footer su dispositivi mobili */
@@ -363,12 +305,6 @@ body{background-color: black; margin: 0; font-family: 'Playfair Display', serif;
     }
 
     .footer-bottom {
-        margin-top: 0px; /* Aggiunge spazio sopra il footer bottom */
-    }
-    .p__footer{
-        color: #D4A017;
-        text-decoration: none;
+        margin-top: 20px; /* Aggiunge spazio sopra il footer bottom */
     }
 }
-
-

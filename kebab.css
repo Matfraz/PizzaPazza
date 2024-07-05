@@ -20,12 +20,12 @@ header {
 
 .menu-item {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     margin: 10px;
     padding: 20px;
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 800px;
 }
 
 .image-container {
@@ -45,15 +45,16 @@ header {
 }
 
 .menu-list {
-    text-align: center;
+    padding: 0 20px;
+    width: calc(100% - 240px); /* Per lasciare spazio all'immagine */
 }
 
 .menu-list h2 {
     margin: 5px 0;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .menu-list p {
     margin: 5px 0 15px;
-    font-size: 1em;
+    font-size: 1.2em;
 }
